@@ -1,0 +1,707 @@
+/* تنظیمات اصلی */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    direction: rtl;
+
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
+
+    background: #f4f8ff;
+    color: #263449;
+}
+
+
+/* نوار بالایی */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 22px 7%;
+
+    background: white;
+
+    border-bottom: 1px solid #e5ecf5;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.brand-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 16px;
+
+    background: #e7f1ff;
+
+    font-size: 28px;
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 21px;
+}
+
+.brand p {
+    margin: 5px 0 0;
+    color: #7b8798;
+    font-size: 13px;
+}
+
+.back-button {
+    padding: 11px 17px;
+
+    color: #1779db;
+    background: #edf5ff;
+
+    text-decoration: none;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.25s;
+}
+
+.back-button:hover {
+    background: #1779db;
+    color: white;
+}
+
+
+/* بخش خوشامدگویی */
+
+.welcome {
+    max-width: 1150px;
+
+    margin: 35px auto;
+    padding: 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 25px;
+
+    border-radius: 25px;
+
+    background: linear-gradient(
+        120deg,
+        #1779db,
+        #65a9ff
+    );
+
+    color: white;
+
+    box-shadow: 0 12px 30px rgba(23, 121, 219, 0.16);
+}
+
+.welcome-text {
+    max-width: 700px;
+}
+
+.welcome-label {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+
+    opacity: 0.85;
+}
+
+.welcome h2 {
+    margin: 0 0 15px;
+
+    font-size: 30px;
+    line-height: 1.8;
+}
+
+.welcome p {
+    margin: 0;
+
+    line-height: 2;
+    font-size: 15px;
+
+    opacity: 0.95;
+}
+
+.welcome-emoji {
+    font-size: 85px;
+}
+
+
+/* محتوای اصلی */
+
+.main-content {
+    max-width: 1150px;
+
+    margin: 55px auto;
+    padding: 0 20px;
+}
+
+
+/* عنوان بخش‌ها */
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    margin: 0 0 8px;
+    font-size: 24px;
+}
+
+.section-heading p {
+    margin: 0;
+
+    color: #7b8798;
+    font-size: 14px;
+}
+
+.project-count {
+    white-space: nowrap;
+
+    padding: 9px 15px;
+
+    border-radius: 20px;
+
+    background: #e5f1ff;
+    color: #1779db;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* شبکه پروژه‌ها */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+/* مربع افزودن پروژه */
+
+.add-project {
+    min-height: 260px;
+
+    padding: 25px 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 13px;
+
+    background: white;
+
+    border: 2px dashed #b9d4f6;
+    border-radius: 20px;
+
+    color: #1779db;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.add-project:hover {
+    transform: translateY(-6px);
+
+    border-color: #1779db;
+
+    background: #f8fbff;
+
+    box-shadow: 0 12px 25px #dce9fa;
+}
+
+.plus-icon {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #e9f3ff;
+
+    border-radius: 20px;
+
+    font-size: 50px;
+    font-weight: 400;
+
+    transition: 0.3s;
+}
+
+.add-project:hover .plus-icon {
+    transform: rotate(90deg);
+
+    background: #1779db;
+    color: white;
+}
+
+.add-project strong {
+    font-size: 15px;
+}
+
+.add-project small {
+    color: #8a98aa;
+    font-size: 12px;
+}
+
+
+/* کارت هر پروژه */
+
+.project-card {
+    min-width: 0;
+
+    overflow: hidden;
+
+    background: white;
+
+    border: 1px solid #e7edf5;
+    border-radius: 20px;
+
+    box-shadow: 0 5px 18px rgba(30, 60, 100, 0.05);
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 14px 30px rgba(30, 60, 100, 0.12);
+}
+
+.project-open {
+    display: block;
+
+    width: 100%;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    text-align: right;
+
+    font-family: inherit;
+
+    cursor: pointer;
+}
+
+.project-cover {
+    display: block;
+
+    width: 100%;
+    height: 165px;
+
+    object-fit: cover;
+
+    background: #eaf2ff;
+}
+
+.project-details {
+    display: block;
+
+    padding: 15px;
+}
+
+.project-title {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #263449;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    overflow-wrap: anywhere;
+}
+
+.project-type {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 8px;
+
+    background: #edf5ff;
+    color: #1779db;
+
+    font-size: 11px;
+}
+
+.project-actions {
+    display: flex;
+
+    gap: 8px;
+
+    padding: 0 15px 15px;
+}
+
+.project-actions button {
+    flex: 1;
+
+    padding: 9px 5px;
+
+    border: none;
+    border-radius: 9px;
+
+    font-family: inherit;
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.download-button {
+    background: #1779db;
+    color: white;
+}
+
+.delete-button {
+    background: #fff0f0;
+    color: #d94848;
+}
+
+.download-button:hover {
+    background: #0d5eae;
+}
+
+.delete-button:hover {
+    background: #ffe0e0;
+}
+
+
+/* تخته مجازی */
+
+.board-section {
+    margin-top: 100px;
+    margin-bottom: 70px;
+
+    padding: 30px;
+
+    background: white;
+
+    border: 1px solid #e7edf5;
+    border-radius: 25px;
+
+    box-shadow: 0 8px 25px rgba(30, 60, 100, 0.05);
+}
+
+.board-toolbar {
+    display: flex;
+
+    gap: 12px;
+
+    margin: 25px 0;
+}
+
+.board-toolbar input {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 14px 16px;
+
+    border: 1px solid #dce6f2;
+    border-radius: 12px;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.board-toolbar input:focus {
+    border-color: #1779db;
+
+    box-shadow: 0 0 0 3px #e5f1ff;
+}
+
+.board-toolbar button {
+    padding: 12px 18px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #1779db;
+    color: white;
+
+    font-family: inherit;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.board-toolbar button:hover {
+    background: #0d5eae;
+}
+
+
+/* یادداشت‌ها */
+
+.notes-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.note {
+    min-height: 150px;
+
+    padding: 18px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.05);
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    overflow-wrap: anywhere;
+
+    animation: noteAppear 0.3s ease;
+}
+
+.note p {
+    margin: 0;
+
+    white-space: pre-wrap;
+    line-height: 1.9;
+
+    font-size: 14px;
+}
+
+.note-footer {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.note-footer small {
+    color: #566173;
+    font-size: 10px;
+}
+
+.note-delete {
+    padding: 5px 9px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    color: #7a3440;
+
+    cursor: pointer;
+
+    font-family: inherit;
+    font-size: 11px;
+}
+
+.note-delete:hover {
+    background: white;
+}
+
+
+/* انیمیشن */
+
+@keyframes noteAppear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* پایین صفحه */
+
+.footer {
+    padding: 25px;
+
+    text-align: center;
+
+    background: white;
+
+    border-top: 1px solid #e5ecf5;
+
+    color: #7b8798;
+    font-size: 13px;
+}
+
+
+/* نمایشگر متوسط */
+
+@media (max-width: 900px) {
+
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .notes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .welcome {
+        margin: 25px 20px;
+    }
+
+}
+
+
+/* موبایل */
+
+@media (max-width: 600px) {
+
+    .topbar {
+        padding: 18px;
+
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .brand h1 {
+        font-size: 17px;
+    }
+
+    .back-button {
+        text-align: center;
+    }
+
+    .welcome {
+        padding: 25px;
+
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .welcome h2 {
+        font-size: 23px;
+    }
+
+    .welcome-emoji {
+        font-size: 55px;
+    }
+
+    .main-content {
+        padding: 0 15px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+    }
+
+    .section-heading h2 {
+        font-size: 20px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .add-project {
+        min-height: 210px;
+        padding: 15px 8px;
+    }
+
+    .plus-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 40px;
+    }
+
+    .project-cover {
+        height: 120px;
+    }
+
+    .project-details {
+        padding: 10px;
+    }
+
+    .project-title {
+        font-size: 13px;
+    }
+
+    .project-actions {
+        padding: 0 8px 10px;
+        gap: 5px;
+    }
+
+    .project-actions button {
+        font-size: 10px;
+    }
+
+    .board-section {
+        padding: 20px 15px;
+        margin-top: 65px;
+    }
+
+    .board-toolbar {
+        flex-direction: column;
+    }
+
+    .board-toolbar button {
+        padding: 13px;
+    }
+
+    .notes-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
