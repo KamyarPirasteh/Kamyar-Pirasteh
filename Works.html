@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استودیوی طراحی کامیار</title>
+
+    <link rel="stylesheet" href="works.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="topbar">
+    <a href="index.html" class="brand">
+        <span class="brand-icon">K</span>
+        <span>استودیوی کامیار<small>فضای خلاقیت تو</small></span>
+    </a>
+
+    <div class="top-actions">
+        <a class="back-link" href="index.html">← بازگشت به سایت</a>
+        <button class="primary-btn" id="saveBtn">ذخیره پروژه</button>
+    </div>
+</header>
+
+<main class="app">
+    <section class="welcome">
+        <div>
+            <span class="eyebrow">CREATIVE STUDIO</span>
+            <h1>ایده‌هایت را به تصویر بکش ✨</h1>
+            <p>اسلاید بساز، طراحی کن و پروژه‌هایت را نگه دار.</p>
+        </div>
+        <div class="welcome-art">🎨</div>
+    </section>
+
+    <section class="editor">
+        <div class="editor-heading">
+            <div>
+                <h2>میز طراحی من</h2>
+                <p>یک ابزار انتخاب کن و طراحی‌ات را شروع کن.</p>
+            </div>
+            <button class="secondary-btn" id="newProjectBtn">＋ پروژه جدید</button>
+        </div>
+
+        <div class="toolbar">
+            <button data-tool="text">T متن</button>
+            <button data-tool="rect">▰ مستطیل</button>
+            <button data-tool="circle">● دایره</button>
+            <button data-tool="triangle">▲ مثلث</button>
+            <button data-tool="line">╱ خط</button>
+
+            <label class="tool-button upload-btn">
+                🖼️ افزودن عکس
+                <input type="file" id="imageInput" accept="image/*" hidden>
+            </label>
+
+            <label class="color-tool" title="رنگ ابزار">
+                <span>🎨 رنگ</span>
+                <input type="color" id="colorPicker" value="#1779db">
+            </label>
+
+            <label class="size-tool">
+                اندازه
+                <input type="number" id="sizeInput" min="10" max="100" value="28">
+            </label>
+
+            <button class="danger-btn" id="deleteBtn">حذف انتخاب</button>
+        </div>
+
+        <div class="workspace">
+            <aside class="slides-panel">
+                <div class="panel-heading">
+                    <h3>اسلایدها</h3>
+                    <button id="addSlideBtn" title="افزودن اسلاید">＋</button>
+                </div>
+                <div id="slidesList" class="slides-list"></div>
+            </aside>
+
+            <section class="canvas-panel">
+                <div class="canvas-heading">
+                    <span id="currentSlideLabel">اسلاید ۱</span>
+                    <span class="canvas-hint">برای جابه‌جایی، عنصر را بکش</span>
+                </div>
+
+                <div class="stage-wrap">
+                    <div id="stage" class="stage">
+                        <div class="stage-empty" id="stageEmpty">
+                            <span>✦</span>
+                            <strong>بوم خلاقیت تو</strong>
+                            <p>از نوار ابزار، متن یا شکل اضافه کن.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="canvas-footer">
+                    <button id="prevSlideBtn">→ قبلی</button>
+                    <span id="slideCounter">۱ از ۱</span>
+                    <button id="nextSlideBtn">بعدی ←</button>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <section class="projects-section">
+        <div class="editor-heading">
+            <div>
+                <h2>پروژه‌های من</h2>
+                <p>پروژه‌هایت را ذخیره کن و هر وقت خواستی دوباره باز کن.</p>
+            </div>
+        </div>
+        <div id="projectsGrid" class="projects-grid"></div>
+    </section>
+
+    <footer>ساخته‌شده با 💙 برای خلاق
+
+یت‌های کامیار پیراسته</footer>
+</main>
+
+<script src="works.js"></script>
+</body>
+</html>
