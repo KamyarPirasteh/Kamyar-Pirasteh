@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>کتابخانه پروژه‌های کامیار</title>
+
+    <link rel="stylesheet" href="articles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- نوار بالای صفحه -->
+
+    <header class="topbar">
+
+        <a href="index.html" class="back-button">
+            ← بازگشت به سایت
+        </a>
+
+        <div class="brand">
+            <span class="brand-icon">🚀</span>
+
+            <div>
+                <h1>کتابخانه پروژه‌های من</h1>
+                <p>ایده‌هایم را به واقعیت تبدیل می‌کنم!</p>
+            </div>
+        </div>
+
+    </header>
+
+
+    <!-- معرفی صفحه -->
+
+    <section class="welcome">
+
+        <div class="welcome-text">
+
+            <span class="welcome-label">MY CREATIVE SPACE</span>
+
+            <h2>
+                به دنیای ایده‌های من خوش آمدید!
+            </h2>
+
+            <p>
+                اینجا می‌توانم پروژه‌ها، تحقیقات، فایل‌های Word
+                و ارائه‌های PowerPoint خودم را نگهداری کنم.
+            </p>
+
+        </div>
+
+        <div class="welcome-emoji">
+            💡
+        </div>
+
+    </section>
+
+
+    <!-- بخش پروژه‌ها -->
+
+    <main class="main-content">
+
+        <section class="projects-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>📚 پروژه‌های من</h2>
+
+                    <p>
+                        پروژه‌های جدیدت را اضافه کن و مجموعه‌ات را بساز.
+                    </p>
+                </div>
+
+                <span id="project-count" class="project-count">
+                    ۰ پروژه
+                </span>
+
+            </div>
+
+
+            <!-- کارت‌های پروژه و دکمه افزودن -->
+
+            <div class="projects-grid" id="projects-grid">
+
+                <!-- دکمه افزودن پروژه -->
+
+                <button
+                    type="button"
+                    class="add-project"
+                    id="add-project">
+
+                    <span class="plus-icon">+</span>
+
+                    <strong>افزودن پروژه جدید</strong>
+
+                    <small>
+                        Word یا PowerPoint
+                    </small>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- بخش تخته مجازی -->
+
+        <section class="board-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>🎨 تخته ایده‌های من</h2>
+
+                    <p>
+                        ایده‌هایت را بنویس، رنگ بده و مرتب کن!
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="board-toolbar">
+
+                <input
+                    type="text"
+                    id="note-input"
+                    placeholder="ایده جدیدت را اینجا بنویس..."
+                    maxlength="300">
+
+                <button
+                    type="button"
+                    id="add-note">
+                    + افزودن یادداشت
+                </button>
+
+            </div>
+
+
+            <div class="notes-grid" id="notes-grid">
+
+                <!-- یادداشت‌ها با JavaScript ساخته می‌شوند -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- پنجره انتخاب فایل پروژه -->
+<button id="add-project" type="button" title="افزودن فایل">+</button>
+
+<input
+type="file"
+id="project-file"
+accept=".doc,.docx,.ppt,.pptx"
+hidden
+
+>
+
+    <!-- انتخاب تصویر پروژه -->
+
+    <input
+        type="file"
+        id="project-image"
+        accept="image/*"
+        hidden>
+
+
+    <footer class="footer">
+
+        <p>
+            ساخته‌شده با 💙 توسط کامیار پیراسته
+        </p>
+
+    </footer>
+
+
+    <script src="articles.js"></script>
+
+</body>
+
+</html>
